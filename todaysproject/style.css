@@ -1,0 +1,8 @@
+#grandparent{
+	border: 2px solid black;
+	
+	background-color: red;
+}
+#parent{
+	background-color: blue;
+}

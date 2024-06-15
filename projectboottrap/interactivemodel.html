@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotstar Subscription</title>
+
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.modal-content {
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 8px 8px 0 0;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-footer {
+  border-radius: 0 0 8px 8px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.form-control {
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 8px;
+}
+
+  </style>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#hotstarSubscriptionModal">
+  Subscribe to Hotstar
+</button>
+
+
+<div class="modal fade" id="hotstarSubscriptionModal" tabindex="-1" role="dialog" aria-labelledby="hotstarSubscriptionModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="hotstarSubscriptionModalLabel">Subscribe to Hotstar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <form>
+          <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Create Password:</label>
+            <input type="password" class="form-control" id="password" placeholder="Create a password" required>
+          </div>
+          <div class="form-group">
+            <label for="subscriptionPlan">Select Subscription Plan:</label>
+            <select class="form-control" id="subscriptionPlan" required>
+              <option value="monthly">Monthly</option>
+              <option value="yearly">Yearly</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="creditCard">Credit Card Number:</label>
+            <input type="text" class="form-control" id="creditCard" placeholder="Enter your credit card number" required>
+          </div>
+          <div class="form-group">
+            <label for="expirationDate">Expiration Date:</label>
+            <input type="text" class="form-control" id="expirationDate" placeholder="MM/YYYY" required>
+          </div>
+          <div class="form-group">
+            <label for="cvv">CVV:</label>
+            <input type="text" class="form-control" id="cvv" placeholder="Enter CVV" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

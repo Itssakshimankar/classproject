@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    #loginform{
+      border: 3px solid black;
+      height: 200px;
+      width: 500px;
+      margin-top: 300px;
+      margin-left: 700px;
+      background-color: pink;
+    }
+    #show{
+      border: 3px solid black;
+      width: 700px;
+      height: 100px;
+      background-color: pink;
+      margin-left: 700px;
+      margin-top: 100px;
+    }
+    #loginform{
+      padding: 80px;
+
+    }
+    #btn{
+      width: 140px;
+      min-height: 40px;
+    }
+    .user{
+      margin-left: 700px;
+      margin-top: 100px;
+      font-size: 2.5rem;
+    }
+    #username{
+      width: 240px;
+      height: 30px;
+    }
+    #password{
+      width: 240px;
+      height: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login">
+    <form id="loginform">
+      <label for="username">Username:</label>
+      <input type="text" id="username"><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password"><br><br>
+      <button type="button" id="btn">Login</button> 
+    </form>
+    <p class="user">user information</p>
+    <div id="show"></div> 
+  </div>
+
+  <script>
+    let button = document.getElementById("btn");
+    button.addEventListener("click", () => {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      const loginInfo = document.getElementById('show'); 
+      loginInfo.innerHTML = `<p>Username: ${username}</p><p>Password: ${password}</p>`;
+
+      document.getElementById('loginform').reset(); 
+    });
+
+  </script>
+</body>
+</html>

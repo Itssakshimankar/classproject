@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Capitalize</h1>
+        <input type="text" placeholder="enter any sentence" id="input">
+         <button id="btn">Capitalize</button>
+         <button id="reverse">Reverse</button>
+        <button id="reverseWord">Reverse words</button>
+        <button id="jspresent">JS present or not</button>
+          <button id="anagram">Anagram</button>
+           <button id="correctemail">Correct email</button>
+    </div>
+    <div id="output"></div>
+    <script>
+          let input = document.getElementById('input');
+        let btn = document.getElementById('btn');
+       let output = document.getElementById('output');
+        let reverseBtn = document.getElementById('reverse');
+        let jspresent = document.getElementById('jspresent');
+        let anagram = document.getElementById('anagram');
+        let correctemail = document.getElementById('correctemail');
+    
+        btn.addEventListener('click', () => {
+            let inputValue = input.value;
+            let res = capitalize(inputValue);
+            output.innerHTML = `<h2>${res}</h2>`;
+        });
+    
+            reverseBtn.addEventListener("click", () => {
+            let inputValue = input.value;
+            let res = reverseSentence(inputValue);
+            output.innerHTML = `<h2>${res}</h2>`;
+        });
+    
+           reverseWord.addEventListener("click", () => {
+              let inputValue = input.value;
+            let res = reverseWords(inputValue); 
+            output.innerHTML = `<h2>${res}</h2>`;
+        });
+   
+        jspresent.addEventListener("click", () => {
+              let inputValue = input.value;
+            let res = findJavaScript(inputValue); 
+            output.innerHTML = `<h2>${res}</h2>`;
+        });
+
+        anagram.addEventListener("click", () => {
+              let inputValue = input.value.split(" ");
+             let res = findAnagram(inputValue)
+		   output.innerHTML = `<h2>${res}</h2>`;
+        });
+
+        correctemail.addEventListener("click", () => {
+            let inputValue = input.value;
+            let res = correctEmail(inputValue); 
+            output.innerHTML = `<h2>${res}</h2>`;
+        });
+    
+	   function capitalize(sentence) {
+	     let a = sentence.split(' ');
+	      for (let i = 0; i < a.length; i++) {
+	       a[i] = a[i].charAt(0).toUpperCase() + a[i].slice(1);
+	     }
+	     return a.join(' ');
+         }
+    
+    
+        function reverseSentence(str)
+	    {
+              return str.split('').reverse().join('');
+        }
+    
+        function reverseWords(str)
+	    {
+             return str.split(' ').reverse().join(' ');
+        }
+        
+        function findJavaScript(str) 
+	   {
+            return str.includes("javascript");
+        }
+
+        function findAnagram(word1, word2)
+	    {
+            let a = word1.split("").sort().join("");
+            let b = word2.split("").sort().join("");
+		  
+            return a === b;
+        }
+
+        function correctEmail(email)
+	    {
+            return email.endsWith(".org");
+         }
+    </script>
+</body>
+</html>

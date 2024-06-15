@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task Manager</title>
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			margin: 0;
+		}
+		.container {
+			display: flex;
+			margin-top: 50px;
+		}
+		#task, #deadline, #add {
+			height: 70px;
+		}
+		#task {
+			width: 600px;
+		}
+		#deadline, #add {
+			width: 300px;
+			margin-left: 50px;
+		}
+		.left-column {
+			display: flex;
+			flex-direction: column;
+			margin-right: 20px;
+		}
+		.input-group, .button-group {
+			margin-bottom: 40px;
+		}
+		.button-group {
+			display: flex;
+		}
+		.button-group button {
+			margin-right: 10px;
+		}
+		#completed-task {
+			width: 500px;
+			height: 600px;
+			margin-left: 100px;
+		}
+		.additional-input input {
+			width: 900px;
+			height: 400px;
+		}
+		.oneline{
+			display: flex;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="left-column">
+			<div class="input-row">
+				<div class="oneline">
+				<div class="input-group">
+					<label for="task"></label>
+					<input type="text" id="task" placeholder="input (Add task)">
+				</div>
+				<div class="input-group">
+					<label for="deadline"></label>
+					<input type="text" id="deadline" placeholder="Time (Deadline)">
+				</div>
+				<div class="input-group">
+					<label for="add"></label>
+					<input type="text" id="add" placeholder="Add Task">
+				</div>
+			</div>
+			</div>
+			<div class="button-group">
+				<button>Completed</button>
+				<button>Not Started</button>
+			</div>
+			<div class="additional-input">
+				<input type="text" placeholder="Additional Input">
+				<label for=""></label>
+			</div>
+		</div>
+		<div>
+			<label for="completed-task"></label>
+			<input type="text" id="completed-task" readonly>
+		</div>
+	</div>
+</body>
+</html>
